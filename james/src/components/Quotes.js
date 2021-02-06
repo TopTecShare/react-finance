@@ -1,11 +1,15 @@
 import React from "react";
 
 function Quotes (props) {
+    // const divStyle ={
+    //         maxHeight: "200px",
+    //         maxWidth: "50%"
+    // }
     return (
-        <div>
-            <h1>{props.name}</h1>
-            <p>{props.symbol}</p>
-            <p>{props.score}</p>
+        <div className="container" >
+            <h3>{props.name}</h3>
+            {/* <p>{props.symbol}</p>
+            <p>{props.score}</p> */}
         </div>
     )
 }

@@ -1,27 +1,22 @@
 // import logo from './logo.svg';
 import './App.css';
-import Data from "./components/Data";
-import Icon from "./components/Icon";
+import RowOne from "./components/RowOne";
+import RowTwo from "./components/RowTwo";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+  const rowStyles = {
+    height: "200px"
+  }
+
   return (
     <div className="App">
-      <Icon />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <Data />
+      <div className="row">
+        <RowOne style={rowStyles} />
+      </div>
+      <div className="row">
+        <RowTwo style={rowStyles} />
+      </div>
     </div>
   );
 }

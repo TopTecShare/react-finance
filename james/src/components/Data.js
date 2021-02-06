@@ -22,15 +22,6 @@ componentDidMount() {
             apiData.push(record)   
         }
 
-        for (let j = 0; j < res.data.news.length; j++) {
-            let content = {
-                link: res.data.news[j].link,
-                title: res.data.news[j].title,
-                publisher: res.data.news[j].publisher
-            }
-            apiNews.push(content)
-        }
-
         this.setState({ apiData: apiData });
         this.setState({ apiNews: apiNews });
     })
