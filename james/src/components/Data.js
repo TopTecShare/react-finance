@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import API from "../utils/API";
 import Quotes from "./Quotes";
+import News from "./News";
 class Data extends React.Component {
 state = {
     apiData: [],
@@ -42,8 +43,13 @@ componentDidMount() {
              name= {rec.name}
              symbol ={rec.symbol}
              score = {rec.score}
-             key={key}/>)}   
-                
+             key={key}/>)} 
+
+            {this.state.apiNews.map( (rec,key) => <News
+             link= {rec.link}
+             title ={rec.title}
+             publisher = {rec.publisher}
+             key={key}/>)}          
        </div> 
        )
 }
