@@ -6,11 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function RowOne() {
     const rowStyle = {
-        display: "flex"
+        display: "flex",
+        border: "black",
+        borderWidth: "2px",
+        backgroundColor: " #74bdbd",
+        color: "charcoal"
     }
 
     return (
-        <div style={rowStyle}>
+        <div className="container" style={rowStyle}>
             <Icon />
             <QuoteData />
         </div>

@@ -8,7 +8,7 @@ class QuoteData extends React.Component {
     }
 
     componentDidMount() {
-        API.getStocks("tesla")
+        API.getStocks("nike")
         .then(res => {
             console.log(res);
             let apiQuote = []
