@@ -8,30 +8,37 @@ class QuoteData extends React.Component {
     }
 
     componentDidMount() {
-        API.getStocks("nike")
+        API.getStocks("tesla")
         .then(res => {
             console.log(res);
             let apiQuote = []
             for (let j = 0; j < res.data.quotes.length; j++) {
                 let record = {
-                    name: res.data.quotes[j].name,
+                    shortname: res.data.quotes[j].shortname,
                     symbol: res.data.quotes[j].symbol,
                     score: res.data.quotes[j].score
                 }
                 apiQuote.push(record)
             }
+            console.log('apiQuote:', apiQuote)
             this.setState({ apiQuote: apiQuote });
         })
         .catch(err => console.log(err));
     }
         render() {
+            console.log('STATE ', this.state)
             return (
                 <div>
-                   {this.state.apiQuote.map( (rec,key) => <Quotes
-                    name= {rec.name}
-                    symbol ={rec.symbol}
-                    score = {rec.score}
-                    key={key}/>)}  
+                   {this.state.apiQuote.map((rec,key) => {
+                       console.log('rec:', rec)
+                      return       <Quotes
+                      shortname= {rec.shortname}
+                      symbol ={rec.symbol}
+                      score = {rec.score}
+                      key={key}/>
+                   }
+              
+                    )}  
                 </div>
             )
         }

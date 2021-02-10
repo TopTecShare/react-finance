@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-// import RowOne from "./components/RowOne";
+import RowOne from "./components/RowOne";
 import RowTwo from "./components/RowTwo";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <div className="row">
-        <RowTwo style={rowStyles} />
+        <RowOne style={rowStyles} />
       </div>
       <div className="row">
         <RowTwo style={rowStyles} />

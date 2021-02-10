@@ -22,4 +22,4 @@ function RowTwo() {
     )
 }
 
-export default RowTwo;
+export default RowTwo; 

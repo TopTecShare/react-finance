@@ -7,9 +7,9 @@ function Quotes (props) {
     // }
     return (
         <div className="container" >
-            <h3>{props.name}</h3>
-            {/* <p>{props.symbol}</p>
-            <p>{props.score}</p> */}
+            <h3>{props.shortname}</h3>
+             <p>{props.symbol}</p> 
+            <p>{props.score}</p> 
         </div>
     )
 }
