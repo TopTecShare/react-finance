@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from 'react-scroll'
 
 const Footer = () => (
   <div className="footer">
-    <p>About React Finance</p>
+    <p><Link  to="about" spy={true} smooth={true}>About React Finance</Link></p>
   </div>
 );
 

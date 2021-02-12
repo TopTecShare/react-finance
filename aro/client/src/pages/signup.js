@@ -37,9 +37,8 @@ const Signup = () => {
   console.log('state', state)
  const { firstName, lastName, email, password } = state
     return (
-      <Container>
-      <Row>
-        <Col>
+     <> 
+      <Col sm="4" id="home" style={{height: 1000}}>
           <Card body className="signup-card">
       <Form className="login-form">
         <h2 className="text-center">React Finance</h2>
@@ -72,9 +71,7 @@ const Signup = () => {
       </Form>
       </Card>
       </Col>
-      </Row>
-      <Footer />
-      </Container>
+      </>
     );
 }
 

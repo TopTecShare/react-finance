@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
 import { Container, Button, Form, FormGroup, Label, Input, Card, Row, Col} from 'reactstrap';
-import Footer from '../components/footer'
 import Loginbutton from '../components/loginbutton'
 import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
@@ -34,18 +33,15 @@ const handleInputChange = event => setState({
   console.log('state', state)
  const {email, password } = state
     return (
-      <div>
-      <Container>
-      <Row>
-        <Col lg={12}>
+    <>
+        <Col sm="4" id="home" style={{height: 1000}}>
           <Card body className="login-card">
             <Form className="login-form">
               <h2 className="text-center">React Finance</h2>
               <h3 className="text-center">Welcome</h3>
               <FormGroup>
                 <Label>Email </Label> 
-                <Input  onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"
-                required/>
+                <Input  onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"required/>
               </FormGroup>
               <FormGroup>
                 <Label>Password </Label> 
@@ -65,10 +61,7 @@ const handleInputChange = event => setState({
             </Form>
           </Card>
         </Col>
-      </Row>
-      <Footer />
-      </Container>
-      </div>
+    </>
     );
   }
 

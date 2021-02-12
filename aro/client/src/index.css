@@ -30,4 +30,13 @@ code {
   color: white;
   font-weight: bold;
   font-size:large;
+  /* height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px; */
+  cursor: pointer;
 }
+

@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 .login-form {
   width: 100%;
   max-width: 330px;
@@ -10,7 +14,7 @@
 .login-card {
   width: 450px;
   height: 600px;
-  left: 725px;  
+  /* left: 200%;   */
   top: 100Px;
   box-shadow: 6px 4px 14px 2px rgba(155, 154, 154, 0.58);
   border-radius: 25px !important;
@@ -20,7 +24,7 @@
 .signup-card {
   width: 450px;
   height: 600px;
-  left: 350px;  
+  /* left: 350px;   */
   top: 100Px;
   box-shadow: 6px 4px 14px 2px rgba(155, 154, 154, 0.58);
   border-radius: 25px !important;
