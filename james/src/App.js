@@ -1,26 +1,24 @@
-// import logo from './logo.svg';
+import logo from "./components/Lego/logo.svg";
 import './App.css';
-import RowOne from "./components/RowOne";
-import RowTwo from "./components/RowTwo";
+// import RowOne from "./components/Lego/RowOne/RowOne";
+// import RowTwo from "./components/Lego/RowTwo/RowTwo";
+import Panels from "./components/Panels/Panels";
 import 'bootstrap/dist/css/bootstrap.min.css'
+// import "./components/Panels/panels.css";
 
 function App() {
-  const rowStyles = {
-    height: "400px",
-    margin: "10px",
-    minWidth: "100%"
-  }
 
   return (
     <div className="App">
-      <div className="row">
-        <RowOne style={rowStyles} />
+      <Panels />
+      {/* <div className="row">
+        <RowOne />
       </div>
       <div className="row">
-        <RowTwo style={rowStyles} />
-      </div>
+        <RowTwo />
+      </div> */}
     </div>
-  );
+  )
 }
 
 export default App;

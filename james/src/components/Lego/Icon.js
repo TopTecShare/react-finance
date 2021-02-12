@@ -1,6 +1,6 @@
 import React from "react";
 // const blackberry = require("../assets/blackberry1.jpg");
-import logo from "../logo.svg";
+import logo from "./logo.svg";
 
 function Icon() {
     const iconStyle = {

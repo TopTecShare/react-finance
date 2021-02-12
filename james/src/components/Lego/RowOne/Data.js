@@ -1,7 +1,7 @@
 import React from "react";
-import API from "../utils/API";
-import Quotes from "./Quotes";
-import News from "./News";
+import API from "../../../utils/API";
+import Quotes from "../Lego/RowOne/Quotes";
+import News from "../Lego/RowTwo/News";
 class Data extends React.Component {
 state = {
     apiData: [],
