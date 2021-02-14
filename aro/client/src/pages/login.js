@@ -5,6 +5,8 @@ import Loginbutton from '../components/loginbutton'
 import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
+import logo from '../images/Screenshot (164).png';
+
 
 
 const Login = () => {
@@ -34,11 +36,13 @@ const handleInputChange = event => setState({
  const {email, password } = state
     return (
     <>
+      <Row>
+        <img src={logo} alt="Logo" id="logo" />;
         <Col sm="4" id="home" style={{height: 1000}}>
           <Card body className="login-card">
             <Form className="login-form">
-              <h2 className="text-center">React Finance</h2>
-              <h3 className="text-center">Welcome</h3>
+              <h2 className="text-center">Welcome</h2>
+              <h3 className="text-center">____________</h3>
               <FormGroup>
                 <Label>Email </Label> 
                 <Input  onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"required/>
@@ -61,6 +65,7 @@ const handleInputChange = event => setState({
             </Form>
           </Card>
         </Col>
+      </Row>
     </>
     );
   }

@@ -14,7 +14,7 @@ html{
 .login-card {
   width: 450px;
   height: 600px;
-  left: 200%;  
+  left: 40%;  
   top: 100Px;
   box-shadow: 6px 4px 14px 2px rgba(155, 154, 154, 0.58);
   border-radius: 25px !important;
@@ -24,7 +24,7 @@ html{
 .signup-card {
   width: 450px;
   height: 600px;
-  /* left: 350px;   */
+  left: 460px;  
   top: 100Px;
   box-shadow: 6px 4px 14px 2px rgba(155, 154, 154, 0.58);
   border-radius: 25px !important;
@@ -37,14 +37,23 @@ html{
   margin-bottom: 10px;
 }
 
+#logo {
+  width: 680px;
+  height: 600px;
+}
+
 @media only screen and (max-width: 600px) {
   .login-card{
     width: 350px;
-    left: 0%; 
+    left: 5%; 
   }
   .signup-card{
     width: 350px;
     left: 0%; 
+  }
+  #logo{
+    width: 400px;
+    height: 350px;
   }
 }
 

@@ -41,8 +41,8 @@ const Signup = () => {
       <Col sm="4" id="home" style={{height: 1000}}>
           <Card body className="signup-card">
       <Form className="login-form">
-        <h2 className="text-center">React Finance</h2>
-        <h3 className="text-center">Sign Up</h3>
+        <h2 className="text-center">Sign Up</h2>
+        <h3 className="text-center">__________</h3>
         <FormGroup>
           <Input onChange = {handleInputChange} value={firstName} type="name"  name="firstName" placeholder="First name"
           required/>
