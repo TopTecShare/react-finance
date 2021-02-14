@@ -36,36 +36,36 @@ const handleInputChange = event => setState({
  const {email, password } = state
     return (
     <>
-      <Row>
-        <img src={logo} alt="Logo" id="logo" />;
-        <Col sm="4" id="home" style={{height: 1000}}>
-          <Card body className="login-card">
-            <Form className="login-form">
-              <h2 className="text-center">Welcome</h2>
-              <h3 className="text-center">____________</h3>
-              <FormGroup>
-                <Label>Email </Label> 
-                <Input  onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"required/>
-              </FormGroup>
-              <FormGroup>
-                <Label>Password </Label> 
-                <Input  onChange = {handleInputChange} value = {password} type="password" name="password" placeholder="password"
-                required/>
-              </FormGroup>
-              <Button  onClick={()=> handleSubmit(state)} className="but-lg btn-dark btn-block">Login</Button>
-              <div className="text-center pt-3"> or sign in with Google account
-              </div>
-              <Loginbutton />
-              <Logoutbutton />
-              <div className="text-center">
-                <a href="/signup"> Sign up</a>
-                <span className="p-2">|</span>
-                <a href="/ForgotPw">Forgot password</a>
-              </div>
-            </Form>
-          </Card>
-        </Col>
-      </Row>
+      <Container>
+        <Row>
+          <img src={logo} alt="Logo" id="logo" />;
+          <Col sm="2" id="home" style={{height: 1000}}>
+            <Card body className="login-card">
+              <Form className="login-form">
+                <h2 className="text-center">Welcome</h2>
+                <h3 className="text-center">____________</h3>
+                <FormGroup>
+                  <Label>Email </Label> 
+                  <Input  onChange = {handleInputChange} value = {email} type="email"  required name="email" placeholder="email" />
+                </FormGroup>
+                <FormGroup>
+                  <Label>Password </Label> 
+                  <Input  onChange = {handleInputChange} value = {password} type="password" required name="password" placeholder="password"/>
+                </FormGroup>
+                <Button  onClick={()=> handleSubmit(state)} className="but-lg btn-dark btn-block">Login</Button>
+                <div className="text-center pt-3"> or sign in with Google account</div>
+                <Loginbutton />
+                <Logoutbutton />
+                <div className="text-center">
+                  <a href="/signup"> Sign up</a>
+                  <span className="p-2">|</span>
+                  <a href="/ForgotPw">Forgot password</a>
+                </div>
+              </Form>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </>
     );
   }
