@@ -9,7 +9,8 @@ const passport = require('./config/passport');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8090;
-// require('./passport-setup');
+// const isAuthenticated = require("../middlewares/ensureAuthenticated");
+// require('./passport-setup')
 
 // Middlewares
 app.use(morgan('dev'));
@@ -46,24 +47,19 @@ app.use(function(err, req, res, next) {
 	res.status(500);
 })
 
-// app.get('/', (req, res) => res.send('you are not logged in!'))
-// app.get('./failed', (req, res) => res.send('Failed to login'))
-// app.get('./good', (req, res) => res.send(`Welcome ${req.user.displayName}!`))
 
+app.get('/failed', (req, res) => res.send('failed to login'))
+// app.get('/good', isAuthenticated, (req, res) => res.send(`Welcome ${req.user.email}!`))
 
-// app.get('/google',passport.authenticate('google', { scope: ['profile', 'email'] }));
+// app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-// app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/login' }),
+// app.get('/google/callback', 
+//   passport.authenticate('google', { failureRedirect: '/failed' }),
 //   function(req, res) {
 //     // Successful authentication, redirect home.
 //     res.redirect('/good');
 //   });
 
-// app.get('/logout', (req, res) => {
-//     req.session = null;
-//     req.logout();
-//     res.redirect('/');
-// })  
 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`);
