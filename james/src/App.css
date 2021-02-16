@@ -63,7 +63,6 @@
   
 }
 
-/*************** aro's page background-color: rgb(30, 136, 122); ***************/
 /**************************** BASIC PANEL GRID *****************************/
 
 .panels > div {
@@ -103,5 +102,12 @@
   grid-column: span 1;
   }
 }
+
+/****** USER PANEL ********/
+.userPanel {
+  min-height: 90vh;
+}
+/****** USER PANEL ********/
+
 
 /**************************** BASIC PANEL GRID *****************************/

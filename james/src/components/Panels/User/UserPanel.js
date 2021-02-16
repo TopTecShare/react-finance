@@ -1,9 +1,12 @@
 import React from 'react';
+// import Dropdown from "./Dropdown";
 
 const UserPanel = () => {
     return (
-        <div>
+        
+        <div className="userPanel">
             <h1>Followed Stocks</h1>
+            
             <ul class="list-group dahsboard-stocks">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Nike
