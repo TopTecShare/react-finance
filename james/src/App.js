@@ -59,8 +59,9 @@ class App extends Component {
                 <h3>{company.name}</h3>
                 <div className='iterations-area'>
                   {[...Array(company.iterations)].map((iteration, index) => {
-                  return 
+                  return (
                     <input key={index} type='radio' />
+                  )
                   })}
                 </div>
               </li>

@@ -1,11 +1,11 @@
 import React from 'react';
 // import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
-import UserPanel from "./User/UserPanel";
-import DiversityPanel from "./Diversity/DiversityPanel";
-import PerformancePanel from "./Performance/PerformancePanel";
-import NewsPanel from "./News/NewsPanel";
+import UserPanel from "./components/Panels/UserPanel";
+import DiversityPanel from "./components/Panels/DiversityPanel";
+import PerformancePanel from "./components/Panels/PerformancePanel";
+import NewsPanel from "./components/Panels/NewsPanel";
 
-const Panels = () => {
+const Dashboard = () => {
     return (
         <div className="panels">
             <div className="panel-user">
@@ -24,4 +24,4 @@ const Panels = () => {
     )
 }
 
-export default Panels;
+export default Dashboard;
