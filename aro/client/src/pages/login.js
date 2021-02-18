@@ -6,7 +6,7 @@ import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import logo from '../images/Screenshot (164).png';
-
+import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
 const Login = () => {
@@ -33,12 +33,26 @@ const handleInputChange = event => setState({
   }
 
   console.log('state', state)
- const {email, password } = state
+  const {email, password } = state
+
+  const [popoverOpen, setPopoverOpen] = useState(false);
+
+  const toggle = () => setPopoverOpen(!popoverOpen);
+ 
     return (
     <>
       <Container>
         <Row>
-          <img src={logo} alt="Logo" id="logo" />
+          <Col>
+          <img src={logo} alt="Logo" id="logo" /> 
+            <Button id="Popover1" type="button">
+               About Up 2 Date
+            </Button>
+          <Popover placement="bottom" isOpen={popoverOpen} target="Popover1" toggle={toggle}>
+            <PopoverHeader>About</PopoverHeader>
+            <PopoverBody>Personalized finance app to track all of your potential investments</PopoverBody>
+          </Popover>
+          </Col>
           <Col sm="2" id="home" style={{height: 500}}>
             <Card body className="login-card">
               <Form className="login-form">
