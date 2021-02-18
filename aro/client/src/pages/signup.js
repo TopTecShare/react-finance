@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Container, Button, Form, FormGroup, Input, Card, Row, Col} from 'reactstrap';
-import Footer from '../components/footer'
+import { Button, Form, FormGroup, Input, Card, Col} from 'reactstrap';
 import Loginbutton from '../components/loginbutton';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
@@ -38,7 +37,7 @@ const Signup = () => {
  const { firstName, lastName, email, password } = state
     return (
      <> 
-      <Col sm="4" id="home" style={{height: 1000}}>
+      <Col sm="4" id="home" style={{height: 500}}>
           <Card body className="signup-card">
       <Form className="login-form">
         <h2 className="text-center">Sign Up</h2>

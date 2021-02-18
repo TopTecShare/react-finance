@@ -9,7 +9,7 @@ function Logoutbutton() {
         window.location.reload();
         alert('Logged out ✌');
          
-    } ;
+    }
 
     return (
         <div>

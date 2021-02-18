@@ -9,7 +9,6 @@ const passport = require('./config/passport');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8090;
-// const isAuthenticated = require("../middlewares/ensureAuthenticated");
 // require('./passport-setup')
 
 // Middlewares
@@ -48,7 +47,7 @@ app.use(function(err, req, res, next) {
 })
 
 
-app.get('/failed', (req, res) => res.send('failed to login'))
+// app.get('/failed', (req, res) => res.send('failed to login'))
 // app.get('/good', isAuthenticated, (req, res) => res.send(`Welcome ${req.user.email}!`))
 
 // app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));

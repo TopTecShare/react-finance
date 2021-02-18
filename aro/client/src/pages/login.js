@@ -38,8 +38,8 @@ const handleInputChange = event => setState({
     <>
       <Container>
         <Row>
-          <img src={logo} alt="Logo" id="logo" />;
-          <Col sm="2" id="home" style={{height: 1000}}>
+          <img src={logo} alt="Logo" id="logo" />
+          <Col sm="2" id="home" style={{height: 500}}>
             <Card body className="login-card">
               <Form className="login-form">
                 <h2 className="text-center">Welcome</h2>

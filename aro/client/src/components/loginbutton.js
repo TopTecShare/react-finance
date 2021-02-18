@@ -2,13 +2,25 @@ import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../utils/refreshtoken';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+
 
 const clientId = '189373330737-gaq6pd4a79ebfgrtmviujopcdti56n5e.apps.googleusercontent.com';
 
+
 function Loginbutton() {
+  const history = useHistory()
     const onSuccess = (res) => {
-      console.log('[Login Success] currentUser:' , res.profileObj); 
-    
+      console.log('[Login Success] currentUser:' , res.profileObj.email); 
+      axios.post(`auth/login`, {email:res.profileObj.email, password:""} )
+      .then(res => {
+        console.log(res);
+        console.log(res.data);  
+        if (res.status === 200 ) {
+          history.push('/signup')
+        }  
+      })
       refreshTokenSetup(res);
       console.log('response',res)
     };

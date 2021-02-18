@@ -1,7 +1,3 @@
-/* html {
-  background-color: lemonchiffon;
-} */
-
 body {
   margin: 0;
   padding: 0;
@@ -30,6 +26,5 @@ code {
   color: white;
   font-weight: bold;
   font-size:large;
-  cursor: pointer;
 }
 
