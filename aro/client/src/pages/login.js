@@ -50,7 +50,7 @@ const handleInputChange = event => setState({
             </Button>
           <Popover placement="bottom" isOpen={popoverOpen} target="Popover1" toggle={toggle}>
             <PopoverHeader>About</PopoverHeader>
-            <PopoverBody>Personalized finance app to track all of your potential investments</PopoverBody>
+            <PopoverBody>Your personalized finance app to track all potential cryptocurrency investments</PopoverBody>
           </Popover>
           </Col>
           <Col sm="2" id="home" style={{height: 500}}>
