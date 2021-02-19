@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../App.css';
 import { Button, Form, FormGroup, Input, Card, Col} from 'reactstrap';
 import Loginbutton from '../components/loginbutton';
+import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 
@@ -62,6 +63,7 @@ const Signup = () => {
         <div className="text-center pt-3"> or sign in with Google account
         </div>
        <Loginbutton />
+       <Logoutbutton />
         <div className="text-center">
           <a href="/login"> Login</a>
           <span className="p-2">|</span>

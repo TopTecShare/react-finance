@@ -9,7 +9,6 @@ const passport = require('./config/passport');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8090;
-// require('./passport-setup')
 
 // Middlewares
 app.use(morgan('dev'));
@@ -45,20 +44,6 @@ app.use(function(err, req, res, next) {
 	console.error(err.stack);
 	res.status(500);
 })
-
-
-// app.get('/failed', (req, res) => res.send('failed to login'))
-// app.get('/good', isAuthenticated, (req, res) => res.send(`Welcome ${req.user.email}!`))
-
-// app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
-
-// app.get('/google/callback', 
-//   passport.authenticate('google', { failureRedirect: '/failed' }),
-//   function(req, res) {
-//     // Successful authentication, redirect home.
-//     res.redirect('/good');
-//   });
-
 
 app.listen(PORT, () => {
 	console.log(`App listening on PORT: ${PORT}`);

@@ -13,7 +13,7 @@ function Loginbutton() {
   const history = useHistory()
     const onSuccess = (res) => {
       console.log('[Login Success] currentUser:' , res.profileObj.email); 
-      axios.post(`auth/login`, {email:res.profileObj.email, password:""} )
+      axios.post(`auth/signup`, {email:res.profileObj.email,firstName:"jack", lastName:"hill", password:"hello"} )
       .then(res => {
         console.log(res);
         console.log(res.data);  
