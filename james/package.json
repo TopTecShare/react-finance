@@ -1,8 +1,10 @@
 {
+  "homepage": "https://jamescbaldwin.github.io/react-finance",
   "name": "reactfinance",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@progress/kendo-data-query": "^1.5.4",
     "@progress/kendo-drawing": "^1.9.4",
     "@progress/kendo-licensing": "^1.1.3",
@@ -33,12 +35,15 @@
     "react-dom": "^17.0.1",
     "react-highcharts": "^16.1.0",
     "react-scripts": "4.0.1",
+    "save-dev": "0.0.1-security",
     "styled-components": "^5.2.1",
     "superagent": "^6.1.0",
     "typescript": "^4.1.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -63,6 +68,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "2.2.1"
   }
 }
