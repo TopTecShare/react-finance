@@ -12,21 +12,21 @@ const clientId = '189373330737-gaq6pd4a79ebfgrtmviujopcdti56n5e.apps.googleuserc
 function Loginbutton() {
   const history = useHistory()
     const onSuccess = (res) => {
-      console.log('[Login Success] currentUser:' , res.profileObj.email); 
+      // console.log('[Login Success] currentUser:' , res.profileObj.email); 
       axios.post(`auth/signup`, {email:res.profileObj.email,firstName:"jack", lastName:"hill", password:"hello"} )
       .then(res => {
-        console.log(res);
-        console.log(res.data);  
+        // console.log(res);
+        // console.log(res.data);  
         if (res.status === 200 ) {
           history.push('/signup')
         }  
       })
       refreshTokenSetup(res);
-      console.log('response',res)
+      // console.log('response',res)
     };
 
     const onFailure = (res) => {
-        console.log('[Login failed] res:', res);
+        // console.log('[Login failed] res:', res);
     };
 
     return (

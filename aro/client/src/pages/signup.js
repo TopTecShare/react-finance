@@ -34,7 +34,7 @@ const Signup = () => {
     })
   }
 
-  console.log('state', state)
+  // console.log('state', state)
  const { firstName, lastName, email, password } = state
     return (
      <> 

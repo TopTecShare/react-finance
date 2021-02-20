@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Container, Button, Form, FormGroup, Label, Input, Card, Row, Col} from 'reactstrap';
+import { Container, Button, Form, FormGroup, Label, Input, Card, Row, Col, FormFeedback} from 'reactstrap';
 import Loginbutton from '../components/loginbutton'
 import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
@@ -15,13 +15,26 @@ const Login = () => {
     email: '',
     password: ''
    });
-
+  
+  const [validate, setValid] = useState({
+   validateEmail: '',
+   validatePassword: '', 
+  }) 
+  
+  
 const handleInputChange = event => setState({
     ...state,
     [event.target.name]: event.target.value,
   })
 
   const handleSubmit = user => {
+    if(state.password == ''){
+     setValid({validatePassword:true})
+    }
+    if(state.email == '' ){
+     setValid({validateEmail:true})
+    }
+
     axios.post(`auth/login`, state )
     .then(res => {
       console.log(res);
@@ -32,7 +45,8 @@ const handleInputChange = event => setState({
     })
   }
 
-  console.log('state', state)
+
+  // console.log('state', state)
   const {email, password } = state
 
   const [popoverOpen, setPopoverOpen] = useState(false);
@@ -59,12 +73,14 @@ const handleInputChange = event => setState({
                 <h2 className="text-center">Welcome</h2>
                 <h3 className="text-center">____________</h3>
                 <FormGroup>
-                  <Label>Email </Label> 
-                  <Input  onChange = {handleInputChange} value = {email} type="email"  required name="email" placeholder="email" />
+                  <Label for="exampleEmail">Email</Label>
+                  <Input invalid={validate.validateEmail}  onChange = {handleInputChange} value = {email} type="email"  required name="email" placeholder="email" />
+                  <FormFeedback>Please enter email</FormFeedback>
                 </FormGroup>
                 <FormGroup>
-                  <Label>Password </Label> 
-                  <Input  onChange = {handleInputChange} value = {password} type="password" required name="password" placeholder="password"/>
+                  <Label for="examplePassword">Password</Label>
+                  <Input invalid={validate.validatePassword}   onChange = {handleInputChange} value = {password} type="password" required name="password" placeholder="password"/>
+                  <FormFeedback>Please enter password</FormFeedback>
                 </FormGroup>
                 <Button  onClick={()=> handleSubmit(state)} className="but-lg btn-dark btn-block">Login</Button>
                 <div className="text-center pt-3"> or sign in with Google account</div>

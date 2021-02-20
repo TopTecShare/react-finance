@@ -11,15 +11,15 @@ function Logoutbutton() {
     const onSuccess = () => {
       axios.post(`auth/logout`)
       .then(res => {
-        console.log(res);
-        console.log(res.data);  
+        // console.log(res);
+        // console.log(res.data);  
         if (res.status === 200 ) {
           history.push('/login')
         }  
       })
         //refreshes page to clear the console
-        alert('Logged out ✌');
-        
+        alert('Logged out ✌')
+        // console.clear();
         // window.location.reload();
     }
     
