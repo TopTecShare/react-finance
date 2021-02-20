@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Stock from "./Stock";
-import "./Stock.css";
-// import API from "./utils/API";
+import CurrencyTable from "./CurrencyTable";
+import "./CurrencyTable.css";
+import "./App.css"
 
 
-const Sherwood = () => {
+const App = () => {
     const [stocks, setStocks] = useState([]);
     const [search, setSearch] = useState('');
 
@@ -28,9 +28,9 @@ const Sherwood = () => {
         )
 
     return (
-        <div>
-            <div>
-                <h1>Search a Stock</h1>
+        <div className="stock-app">
+            <div className="stock-search">
+                <h1 className="stock-text">Search a Stock</h1>
                 <form >
                     <input type="text" placeholder="Search"
                 className="stock-input" onChange={handleChange}/>
@@ -39,7 +39,7 @@ const Sherwood = () => {
             </div>
             {filteredStocks.map(stock => {
                 return (
-                    <Stock key={stock.id} 
+                    <CurrencyTable key={stock.id} 
                     name={stock.name} 
                     image={stock.image}
                     symbol={stock.symbol} 
@@ -54,4 +54,4 @@ const Sherwood = () => {
     )
 }
 
-export default Sherwood;
+export default App;
