@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Sherwood from "./Sherwood";
+import App from "./Application/index"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Sherwood />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
