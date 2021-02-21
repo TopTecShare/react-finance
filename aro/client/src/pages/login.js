@@ -40,9 +40,14 @@ const handleInputChange = event => setState({
       console.log(res);
       console.log(res.data);  
       if (res.status === 200 ) {
-        history.push('/signup')
-      } 
+        history.push('/signup');
+      }  
     })
+    .catch(function (error) {
+      console.log(error);
+      alert('Wrong username or password')
+      window.location.reload();
+    });
   }
 
 
