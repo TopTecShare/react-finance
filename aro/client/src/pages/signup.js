@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
-import { Button, Form, FormGroup, Input, Card, Col} from 'reactstrap';
+import { Button, Form, FormGroup, Input, Card, Col, FormFeedback} from 'reactstrap';
 import Loginbutton from '../components/loginbutton';
 import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
@@ -16,14 +16,34 @@ const Signup = () => {
    password: ''
   });
 
- const handleInputChange = event =>  setState({
+  const [validate, setValid] = useState({
+    validateFirstName: '',
+    validateLastName: '', 
+    validateEmail: '', 
+    validatePassword: '', 
+   }) 
+
+  const handleInputChange = event =>  setState({
         ...state,
         [event.target.name]: event.target.value,
     })
     
     
     
- const handleSubmit = user => {
+  const handleSubmit = user => {
+    if(state.password === '' ){
+     setValid({validatePassword:true})
+    }
+    if(state.email === '' ){
+     setValid({validateEmail:true})
+    }
+    if(state.lastName === '' ){
+     setValid({validateLastName:true})
+    }
+    if(state.firstName === ''){
+      setValid({validateFirstName:true})
+     }
+
     axios.post(`auth/signup`, state )
     .then(res => {
       console.log(res);
@@ -44,20 +64,20 @@ const Signup = () => {
         <h2 className="text-center">Sign Up</h2>
         <h3 className="text-center">__________</h3>
         <FormGroup>
-          <Input onChange = {handleInputChange} value={firstName} type="name"  name="firstName" placeholder="First name"
-          required/>
+          <Input invalid={validate.validateFirstName} onChange = {handleInputChange} value={firstName} type="name"  name="firstName" placeholder="First name"/>
+          <FormFeedback>Please enter first name</FormFeedback>
         </FormGroup>
         <FormGroup>
-          <Input onChange = {handleInputChange} value={lastName}  type="name"  name="lastName" placeholder="Last name"
-          required/>
+          <Input invalid={validate.validateLastName} onChange = {handleInputChange} value={lastName}  type="name"  name="lastName" placeholder="Last name"/>
+          <FormFeedback>Please enter last name</FormFeedback>
         </FormGroup>
         <FormGroup>
-          <Input onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"
-          required/>
+          <Input invalid={validate.validateEmail} onChange = {handleInputChange} value = {email} type="email" name="email" placeholder="email"/>
+          <FormFeedback>Please enter email</FormFeedback>
         </FormGroup>
         <FormGroup>
-          <Input onChange = {handleInputChange} value = {password} type="Password" name="password" placeholder="Password"
-          required/>
+          <Input invalid={validate.validatePassword} onChange = {handleInputChange} value = {password} type="Password" name="password" placeholder="Password"/>
+          <FormFeedback>Please enter password</FormFeedback>
         </FormGroup>
         <Button onClick={()=> handleSubmit(state)} className="but-lg btn-dark btn-block">Sign up</Button>
         <div className="text-center pt-3"> or sign in with Google account

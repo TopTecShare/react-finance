@@ -28,10 +28,10 @@ const handleInputChange = event => setState({
   })
 
   const handleSubmit = user => {
-    if(state.password == ''){
+    if(state.password === ''){
      setValid({validatePassword:true})
     }
-    if(state.email == '' ){
+    if(state.email === '' ){
      setValid({validateEmail:true})
     }
 
@@ -41,7 +41,7 @@ const handleInputChange = event => setState({
       console.log(res.data);  
       if (res.status === 200 ) {
         history.push('/signup')
-      }  
+      } 
     })
   }
 
