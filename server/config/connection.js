@@ -7,8 +7,15 @@ let MONGO_URL;
 const MONGO_LOCAL_URL = 'mongodb://localhost/project3_dev';
 
 if (process.env.MONGODB_URI) {
-	mongoose.connect(process.env.MONGODB_URI);
-	MONGO_URL = process.env.MONGODB_URI;
+	mongoose.connect(process.env.MONGODB_URI || 
+		'mongodb://localhost/up2datefinance',
+		{
+		  useNewUrlParser: true,
+		  useUnifiedTopology: true,
+		  useCreateIndex: true,
+		  useFindAndModify: false
+		}
+	  );
 } else {
 	mongoose.connect(MONGO_LOCAL_URL); // local mongo url
 	MONGO_URL = MONGO_LOCAL_URL;
