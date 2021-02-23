@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./App.css";
+import "../Application/App.css"
 import Greeting from "../Settings/Greeting";
 import AppLayout from "../Application/AppLayout";
 import AppBar from "../Application/AppBar";
