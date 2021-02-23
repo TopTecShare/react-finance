@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import '../App.css';
 import { Container, Button, Form, FormGroup, Label, Input, Card, Row, Col, FormFeedback} from 'reactstrap';
 import Loginbutton from '../components/loginbutton'
-import Logoutbutton from '../components/logoutbutton';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import logo from '../images/Screenshot (164).png';
+import logo from '../images/Screenshot (178).png';
 import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
@@ -65,7 +64,7 @@ const handleInputChange = event => setState({
           <Col>
           <img src={logo} alt="Logo" id="logo" /> 
             <Button id="Popover1" type="button">
-               About Up 2 Date
+               About Crypto-Tracker
             </Button>
           <Popover placement="bottom" isOpen={popoverOpen} target="Popover1" toggle={toggle}>
             <PopoverHeader>About</PopoverHeader>

@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E6E6E6 !important ;
 }
 
 code {
@@ -16,7 +17,7 @@ code {
 .footer{
   margin-top: 1rem;
   padding: 1rem;
-  background-color: rgb(30, 136, 122);
+  background-color:#3E588F;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -27,4 +28,3 @@ code {
   font-weight: bold;
   font-size:large;
 }
-
