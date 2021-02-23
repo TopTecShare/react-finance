@@ -49,7 +49,7 @@ const Signup = () => {
       console.log(res);
       console.log(res.data);  
       if (res.status === 200 && res.data.success) {
-        history.push('/login')
+        history.push('/mainpage')
       }  
     })
   }
@@ -83,7 +83,6 @@ const Signup = () => {
         <div className="text-center pt-3"> or sign in with Google account
         </div>
        <Loginbutton />
-       <Logoutbutton />
         <div className="text-center">
           <a href="/login"> Login</a>
           <span className="p-2">|</span>

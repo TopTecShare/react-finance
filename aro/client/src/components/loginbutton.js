@@ -18,7 +18,7 @@ function Loginbutton() {
         // console.log(res);
         // console.log(res.data);  
         if (res.status === 200 ) {
-          history.push('/signup')
+          history.push('/mainpage')
         }  
       })
       refreshTokenSetup(res);

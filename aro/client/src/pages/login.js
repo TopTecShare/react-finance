@@ -40,7 +40,7 @@ const handleInputChange = event => setState({
       console.log(res);
       console.log(res.data);  
       if (res.status === 200 ) {
-        history.push('/signup');
+        history.push('/mainpage');
       }  
     })
     .catch(function (error) {
@@ -90,7 +90,6 @@ const handleInputChange = event => setState({
                 <Button  onClick={()=> handleSubmit(state)} className="but-lg btn-dark btn-block">Login</Button>
                 <div className="text-center pt-3"> or sign in with Google account</div>
                 <Loginbutton />
-                <Logoutbutton />
                 <div className="text-center">
                   <a href="/signup"> Sign up</a>
                   <span className="p-2">|</span>

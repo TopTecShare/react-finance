@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from './pages/login';
 import Footer from "./components/footer";
 import Signup from './pages/signup';
+import MainPage from './pages/mainpage';
 
 
 function App () {
@@ -12,8 +13,8 @@ function App () {
           <Route exact path="/" component={Login} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/mainpage" component={MainPage} />
           <Footer />
-          {/* <Route exact path="/dashboard" component={Dashboard} /> */}
       </div>
     </Router>
     );
