@@ -174,3 +174,83 @@ img {
   color:  #11d811;
 }
 
+button {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  width: auto;
+  cursor: pointer;
+  background-color: rgb(12, 36, 145);
+  color: whitesmoke;
+  font-size: 1.5rem;
+  font-family: Monaco;
+  margin: 0.5rem;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.marquee {
+  margin-left: 10vw;
+  width: 80vw;
+  height: 20vh;
+  background-color: none;
+  /* background-color: rgb(7, 31, 84); */
+  color: rgb(203, 73, 50);
+  /* color: #4F4BC5; */
+  margin-top: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 15rem;
+  /* border-radius: 6px; */
+}
+
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling 20s linear infinite;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0vw); }
+  100% { transform: translateX(-180vw); }
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid teal; */
+  width: 20vw;
+  flex-shrink: 0;
+  font-size: 5rem;
+  white-space: nowrap;
+}
+
+.marquee-content li {
+  cursor: pointer;
+}
+
+.marquee-content li a:link,
+.marquee-content li a:visited,
+.marquee-content li a:hover,
+.marquee-content li a:active {
+  color: rgb(203, 73, 50);
+  text-decoration: none;
+}
+

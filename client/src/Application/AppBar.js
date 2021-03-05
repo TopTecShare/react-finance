@@ -46,12 +46,14 @@ function ControlButton({name}) {
 
 export default function() {
     return (
+        <>
         <Bar>
         <Logo>Crypto-Tracker</Logo>
-        <div/>
         <ControlButton active name="dashboard" />
         <ControlButton name="settings" />
+        <ControlButton name="About Us"/>
         <Logoutbutton />
     </Bar>
+    </>
     )
 }

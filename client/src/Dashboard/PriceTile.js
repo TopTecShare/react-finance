@@ -5,6 +5,7 @@ import {fontSize1, fontSize3, fontSizeBig, greenBoxShadow} from "../Shared/Style
 import {CoinHeaderGridStyled} from "../Settings/CoinHeaderGrid";
 import {AppContext} from "../Application/AppProvider";
 
+
 const JustifyRight = styled.div`
     justify-self: right;
 `
@@ -36,7 +37,6 @@ const PriceTileStyled = styled(SelectableTile)`
     grid-template-columns: repeat(3, 1fr);
     justify-items: right;
   `}
-
   ${props => props.currentFavorite && css`
     ${greenBoxShadow}
     pointer-events: none;

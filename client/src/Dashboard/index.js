@@ -4,7 +4,7 @@ import Page from "../Shared/Page";
 import PriceGrid from "./PriceGrid";
 import CoinSpotlight from "./CoinSpotlight";
 import PriceChart from "./PriceChart";
-import Content from "../Dashboard/Content"
+import Content from "./Content"
 
 const ChartGrid = styled.div`
     display: grid;
