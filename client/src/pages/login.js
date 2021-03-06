@@ -9,6 +9,10 @@ import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 
 const Login = () => {
+  const [authState, setAuthState] = useState({
+    isAuthenticated: false
+  });
+
   const history = useHistory()
   const [state, setState] = useState({
     email: '',
@@ -36,10 +40,12 @@ const handleInputChange = event => setState({
 
     axios.post(`auth/login`, state )
     .then(res => {
-      console.log(res);
-      console.log(res.data);  
+      // console.log(res);
+      // console.log(res.data);  
       if (res.status === 200 ) {
+        authState.isAuthenticated = true
         history.push('/mainpage');
+        setAuthState();
       }  
     })
     .catch(function (error) {
@@ -48,7 +54,6 @@ const handleInputChange = event => setState({
       window.location.reload();
     });
   }
-
 
   // console.log('state', state)
   const {email, password } = state
@@ -100,6 +105,7 @@ const handleInputChange = event => setState({
         </Row>
       </Container>
     </>
+    
     );
   }
 

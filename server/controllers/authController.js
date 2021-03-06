@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   register: (req, res) => {
-    console.log('body!!!! ', req.body)
+    // console.log('body!!!! ', req.body)
     const { firstName, lastName, email, password } = req.body;
     // ADD VALIDATION
     console.log(req.body)

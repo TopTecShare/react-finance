@@ -6,6 +6,7 @@ import {AppProvider} from "../Application/AppProvider";
 import Settings from "../Settings";
 import Content from "../Shared/Content";
 import Dashboard from "../Dashboard"
+import AboutUs from "../Aboutus"
 
 function MainPage () {
     return (
@@ -15,6 +16,7 @@ function MainPage () {
               <Content>
               <Settings />
               <Dashboard />
+              <AboutUs />
               </Content>
             </AppProvider>
         </AppLayout>

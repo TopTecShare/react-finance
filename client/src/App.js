@@ -1,20 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from './pages/login';
 import Footer from "./components/footer";
 import Signup from './pages/signup';
 import MainPage from './pages/mainpage';
+import PrivateRoute from './private'
 
 
 function App () {
+
+
     return (
       <Router>
       <div>
+        <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/mainpage" component={MainPage} />
-          <Footer />
+          <PrivateRoute
+          exact path="/mainpage" 
+          component={MainPage} 
+          isAuthenticated= {true}
+          />
+        </Switch>
+      <Footer />
       </div>
     </Router>
     );
